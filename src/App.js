@@ -18,13 +18,15 @@ function App() {
         <h1 className={styles.cardTitle}>Counter</h1>
         <div className={styles.cardBody}>
           <button
-            onPointerDown={handleDecrement}
+            onClick={handleDecrement}
             className={`${styles.btn} ${styles.red}`}
             disabled={!count}
           >
             -
           </button>
-          <span className={styles.count}>{count}</span>
+          <span data-testid='count' className={styles.count}>
+            {count}
+          </span>
           <button
             onClick={handleIncrement}
             className={`${styles.btn} ${styles.blue}`}
